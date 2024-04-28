@@ -1,7 +1,6 @@
 pipeline {
 	    agent any
 	
-
 	        // Environment Variables
 	        environment {
 	        MAJOR = '1'
@@ -12,9 +11,6 @@ pipeline {
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "Demo-01"
 	    }
-	
-
-	
 
 	    stages {
 	
@@ -33,7 +29,6 @@ pipeline {
 	            }
 	        }
 	
-
 	         // Build Stages
 	        stage('Build') {
 	            steps {
@@ -51,10 +46,22 @@ pipeline {
 	        stage('Test') {
 	            steps {
 	                echo 'Testing..the workflow...'
+						UiPathRunJob(
+						credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
+						failWhenJobFails: true,
+						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+						orchestratorAddress: "${UIPATH_ORCH_URL}",
+						orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
+						parametersFilePath: '',
+						priority: 'Low',
+						processName: 'uiPathDemoTest',
+						resultFilePath: 'output.json',
+						strategy: Dynamically(jobsCount: 1, machine: 'TestMachine', user: 'gurpalt@gmail.com'), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
+						)
+
 	            }
 	        }
 	
-
 	         // Deploy Stages
 	        stage('Deploy to UAT') {
 	            steps {
@@ -66,16 +73,13 @@ pipeline {
 	                	folderName: "${UIPATH_ORCH_FOLDER_NAME}",
 	                	environments: '',
 	                	credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
-				traceLevel: 'None',
-				entryPointPaths: 'Main.xaml',
-				createProcess: true
+						traceLevel: 'None',
+						entryPointPaths: 'Main.xaml',
+						createProcess: true
 	        		)
 	            }
 	        }
 	
-
-	
-
 	         // Deploy to Production Step
 	        stage('Deploy to Production') {
 	            steps {
@@ -83,7 +87,6 @@ pipeline {
 	                }
 	            }
 	    }
-	
 
 	    // Options
 	    options {
@@ -92,9 +95,6 @@ pipeline {
 	        skipDefaultCheckout()
 	    }
 	
-
-	
-
 	    // 
 	    post {
 	        success {
@@ -109,5 +109,4 @@ pipeline {
 	        }
 	    }
 	
-
 	}
