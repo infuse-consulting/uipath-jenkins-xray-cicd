@@ -1,22 +1,19 @@
 {
-  "name": "uiPathDemoTest",
-  "projectId": "7410c424-5828-4140-9d15-bfea0b68f543",
-  "description": "Blank Process",
+  "name": "UiPath Jenkins CICD Demo",
+  "projectId": "616fc3b5-a467-4e9e-9dc3-3fa41d23f778",
+  "description": "CICD Demo Process with Jenkins",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.23.2-preview]",
-    "UiPath.Jira.Activities": "[2.4.3]",
-    "UiPath.Jira.IntegrationService.Activities": "[6.1.0]",
-    "UiPath.Mail.Activities": "[1.22.1]",
-    "UiPath.System.Activities": "[24.2.0-preview]",
-    "UiPath.Testing.Activities": "[24.2.0-preview]",
-    "UiPath.UIAutomation.Activities": "[24.2.0-preview]"
+    "UiPath.Excel.Activities": "[2.9.3]",
+    "UiPath.Mail.Activities": "[1.9.3]",
+    "UiPath.System.Activities": "[20.10.1]",
+    "UiPath.UIAutomation.Activities": "[20.10.6]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "24.2.1.0",
-  "projectVersion": "1.0.3",
+  "studioVersion": "20.10.2.0",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -32,7 +29,7 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": true,
+    "mustRestoreAllDependencies": false,
     "pipType": "ChildSession"
   },
   "designOptions": {
@@ -46,13 +43,14 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
+    "modernBehavior": false,
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "db8468dc-3789-499b-99e7-ad2bc529b873",
+      "uniqueId": "1523008e-b7e5-4ce9-a390-7f9dd3df6004",
       "input": [],
       "output": []
     }
@@ -60,5 +58,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Windows"
+  "targetFramework": "Legacy"
 }
