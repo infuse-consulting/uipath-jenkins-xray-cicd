@@ -52,7 +52,6 @@ pipeline {
 	         // Test Stages
 	        stage('Test') {
 	            steps {
-					def selectedJobType = params.jobType
 	                echo 'Testing..the workflow...'
 						UiPathRunJob(
 						credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
@@ -68,7 +67,7 @@ pipeline {
 						timeout: 1800,
 						waitForJobCompletion: false,
 						traceLevel: 'None',
-						jobType: selectedJobType
+						jobType: params.jobType
 						)
 
 	            }
