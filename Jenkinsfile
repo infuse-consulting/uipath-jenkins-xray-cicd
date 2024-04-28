@@ -56,7 +56,7 @@ pipeline {
 						priority: 'Low',
 						processName: 'uiPathDemoTest',
 						resultFilePath: 'output.json',
-						strategy: Dynamically(jobsCount: 1, machine: 'TestMachine', user: 'gurpalt@gmail.com'), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
+						strategy: Dynamically(jobsCount: 1, machine: 'TestMachine', user: 'gurpal.thumber'), timeout: 3600, waitForJobCompletion: true, traceLoggingLevel: 'None'
 						)
 
 	            }
