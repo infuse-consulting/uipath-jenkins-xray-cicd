@@ -1,13 +1,6 @@
 pipeline {
 	    agent any
 
-		parameters {
-			string (defaultValue: 'Unattended',
-			description: 'Selected job type',
-			name: 'jobType'
-			
-			)
-		}
 	
 	        // Environment Variables
 	        environment {
@@ -49,7 +42,7 @@ pipeline {
 	        )
 	            }
 	        }
-			
+
 	         // Test Stages
 	        stage('Perform Tests') {
 	            steps {
