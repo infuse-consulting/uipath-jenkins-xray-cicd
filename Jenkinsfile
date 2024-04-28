@@ -56,7 +56,7 @@ pipeline {
 						priority: 'Low',
 						processName: 'uiPathDemoTest',
 						resultFilePath: 'output.json',
-						jobType: "Unattended"
+						strategy: Dynamically(jobsCount: 1, machine: 'TestMachine', user: 'gurpal.thumber'), timeout: 3600, waitForJobCompletion: true, traceLevel: 'None'
 						)
 
 	            }
