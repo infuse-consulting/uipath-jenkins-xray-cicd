@@ -57,6 +57,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Bohemian Rhapsody" sap:VirtualizedContainerService.HintSize="416,471" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -65,9 +66,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Caught in a landslide&quot; + Environment.NewLine + &quot;No escape from reality&quot;]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Open your eyes&quot; + Environment.NewLine + &quot;Look up to the skies and seeeee&quot;]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Poor boy&quot; + Environment.NewLine + &quot;I need no sympathy&quot;]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Because I am easy come, easy go&quot; + Environment.NewLine + &quot;Little high, little low&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Message Box 1&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 01&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Message Box 2&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 02&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Message Box 3&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 03&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Message Box 4&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 04&quot;]" />
   </Sequence>
 </Activity>
