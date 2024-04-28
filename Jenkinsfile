@@ -59,7 +59,7 @@ pipeline {
 						strategy: Robot('gurpalt@gmail.com'),
 						timeout: 1800,
 						waitForJobCompletion: false,
-						traceLevel: 'None'
+						traceLevel: 'None',
 						jobType: 'unattended'
 						)
 
