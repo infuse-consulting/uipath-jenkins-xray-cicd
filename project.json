@@ -1,5 +1,5 @@
 {
-  "name": "UiPath Jenkins CICD Demo",
+  "name": "UiPath Jenkins CICD JIRA Demo",
   "projectId": "616fc3b5-a467-4e9e-9dc3-3fa41d23f778",
   "description": "CICD Demo Process with Jenkins",
   "main": "Main.xaml",
@@ -13,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.2.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
