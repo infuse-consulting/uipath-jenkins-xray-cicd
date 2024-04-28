@@ -60,7 +60,7 @@ pipeline {
 						timeout: 1800,
 						waitForJobCompletion: false,
 						traceLevel: 'None',
-						jobType: 'unattended'
+						jobType: ['Unattended']
 						)
 
 	            }
