@@ -55,7 +55,8 @@ pipeline {
 						parametersFilePath: '',
 						priority: 'Low',
 						processName: 'uiPathDemoTest',
-						resultFilePath: 'output.json'
+						resultFilePath: 'output.json',
+						jobType: "Unattended"
 						)
 
 	            }
