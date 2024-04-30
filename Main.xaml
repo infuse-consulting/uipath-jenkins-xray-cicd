@@ -70,6 +70,6 @@
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Message Box 1&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 01&quot;]" />
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Message Box 2&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 02&quot;]" />
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Message Box 3&quot; + Environment.NewLine + &quot;Oracle Fusion Demo Message 03&quot;]" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Message Box 3&quot; + Environment.NewLine + &quot;Imperial UiPath Demo&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Message Box 3&quot; + Environment.NewLine + &quot;Imperial Chnage&quot;]" />
   </Sequence>
 </Activity>
