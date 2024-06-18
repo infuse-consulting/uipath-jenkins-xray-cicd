@@ -1,4 +1,4 @@
-name: Run UiPath Test Set
+name: Run UiPath Test Set Using CLI
 
 on:
   push:
