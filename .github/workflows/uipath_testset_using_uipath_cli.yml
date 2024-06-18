@@ -1,0 +1,44 @@
+name: Run UiPath Test Set
+
+on:
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  run-uipath-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install uipath-cli
+      run: npm install -g @uipath/cli
+
+    - name: Authenticate with UiPath Orchestrator
+      run: |
+        uipath auth -u "${{ secrets.ORCHESTRATOR_URL }}" \
+                     --client-id "${{ secrets.ORCHESTRATOR_CLIENT_ID }}" \
+                     --user-key "${{ secrets.ORCHESTRATOR_USER_KEY }}" \
+                     --tenant "${{ secrets.ORCHESTRATOR_TENANT }}"
+
+    - name: Trigger UiPath Test Set
+      run: |
+        uipath test-set start --id "${{ secrets.ORCHESTRATOR_TEST_SET_ID }}"
+
+    - name: Wait and Get Test Results
+      run: |
+        sleep 60  # Wait for a minute before checking the test results
+        uipath test-set results --id "${{ secrets.ORCHESTRATOR_TEST_SET_ID }}" --format json > test_results.json
+
+    - name: Print Test Results
+      run: |
+        cat test_results.json
