@@ -1,1 +1,39 @@
+name: Run UiPath Test Set
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run_uipath_test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up UiPath CLI
+        run: |
+          choco install uipath-cli --version=2.0.0 -y
+
+      - name: Authenticate with UiPath Orchestrator
+        run: |
+          uipath auth --url ${{ secrets.ORCHESTRATOR_URL }} \
+                      --username ${{ secrets.ORCHESTRATOR_TENANT }} \
+                      --client-id ${{ secrets.ORCHESTRATOR_CLIENT_ID }} \
+                      --user-key ${{ secrets.ORCHESTRATOR_USER_KEY }}
+      
+      - name: Trigger UiPath Test Set
+        run: |
+          uipath run-testset --testset-id ${{ secrets.TEST_SET_ID }} --wait-for-completion
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: Path\To\Test\Results  
