@@ -1,5 +1,5 @@
 
-name: run-uipath-tests-brandon-no-xray
+name: run-uipath-test-no-xray
 
 on:
   workflow_dispatch:
