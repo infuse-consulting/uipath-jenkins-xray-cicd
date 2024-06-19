@@ -1,0 +1,46 @@
+
+name: run-uipath-tests-no-xray
+
+on:
+  workflow_dispatch:
+    inputs:
+      testPlanId:
+        type: string
+        description: 'The Xray test plan to associate the test results with'
+        default: ''
+      testSetName:
+        type: string
+        description: 'The test set in Orchestrator to execute'
+        default: 'ImperialDemoTestSet03'
+
+jobs:
+  test:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install UiPath CLI
+        run: |
+          $ProgressPreference = 'SilentlyContinue'
+          Invoke-WebRequest -Uri ${{ vars.UIPATH_CLI_URL }} -OutFile UiPath.CLI.Windows.nupkg;7z.exe x UiPath.CLI.Windows.nupkg -ouipath-cli -y
+    
+      - name: Run Tests in Orchestrator
+        env:
+          UIPATH_APP_SECRET: ${{ secrets.UIPATH_APP_SECRET }}
+        run: |
+          uipath-cli\tools\uipcli.exe test run "${{ vars.UIPATH_ORC_URL }}" "${{ vars.UIPATH_ORC_TENANT_NAME }}" `
+          --accountForApp "infuseconsulting" `
+          --applicationId "${{ vars.UIPATH_APP_ID }}" `
+          --applicationSecret "$env:UIPATH_APP_SECRET" `
+          --applicationScope "${{ vars.UIPATH_APP_SCOPE }}" `
+          --organizationUnit "Demo" `
+          --testset "${{ github.event.inputs.testSetName }}" `
+          --attachRobotLogs "true" `
+          --out "junit" `
+          --result_path ".\output\testResults.xml"
+
+      - name: Archive test results
+        uses: actions/upload-artifact@v4
+        with:
+            name: test-results-report
+            path: .\output\testResults.xml
