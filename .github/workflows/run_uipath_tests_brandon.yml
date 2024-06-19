@@ -1,5 +1,5 @@
 
-name: run-uipath-tests
+name: run-uipath-tests-brandon
 
 on:
   workflow_dispatch:
