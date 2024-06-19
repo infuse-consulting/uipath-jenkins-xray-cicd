@@ -11,7 +11,7 @@ on:
       testSetName:
         type: string
         description: 'The test set in Orchestrator to execute'
-        default: 'uipath-workflow'
+        default: 'test-demo-01'
 
 jobs:
   test:
