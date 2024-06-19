@@ -11,7 +11,7 @@ on:
       testSetName:
         type: string
         description: 'The test set in Orchestrator to execute'
-        default: 'TA-PagesLoad'
+        default: 'ImperialDemoTestSet03'
 
 jobs:
   test:
@@ -29,7 +29,7 @@ jobs:
           UIPATH_APP_SECRET: ${{ secrets.UIPATH_APP_SECRET }}
         run: |
           uipath-cli\tools\uipcli.exe test run "${{ vars.UIPATH_ORC_URL }}" "${{ vars.UIPATH_ORC_TENANT_NAME }}" `
-          --accountForApp "imperialcollegelondon" `
+          --accountForApp "infuseconsulting" `
           --applicationId "${{ vars.UIPATH_APP_ID }}" `
           --applicationSecret "$env:UIPATH_APP_SECRET" `
           --applicationScope "${{ vars.UIPATH_APP_SCOPE }}" `
