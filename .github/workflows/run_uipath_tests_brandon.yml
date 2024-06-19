@@ -33,7 +33,7 @@ jobs:
           --applicationId "${{ vars.UIPATH_APP_ID }}" `
           --applicationSecret "$env:UIPATH_APP_SECRET" `
           --applicationScope "${{ vars.UIPATH_APP_SCOPE }}" `
-          --organizationUnit "Demo" `
+          --organizationUnit "Demo-01" `
           --testset "${{ github.event.inputs.testSetName }}" `
           --attachRobotLogs "true" `
           --out "junit" `
