@@ -50,7 +50,7 @@ jobs:
         env:
           XRAY_CLIENT_SECRET: ${{ secrets.XRAY_CLIENT_SECRET }}
         run: |
-          .\ci-scripts\import_results_to_xray.ps1 `
+          .\ci-scripts\import_results_to_xrayjira.ps1 `
           -clientID "${{ vars.XRAY_CLIENT_ID }}" `
           -clientSecret "$env:XRAY_CLIENT_SECRET" `
           -projectKey "TTW" `
