@@ -5513,15 +5513,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gurpal.thumber\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "UiPath Jenkins CICD Demo",
-      "projectName": "UiPath Jenkins CICD Demo",
-      "projectPath": "C:\\Users\\gurpal.thumber\\OneDrive - Infuse Consulting Limited\\Documents\\UiPath\\UiPath_Jenkins_CICDDemo\\.local",
-      "packagesPath": "C:\\Users\\gurpal.thumber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gurpal.thumber\\OneDrive - Infuse Consulting Limited\\Documents\\UiPath\\UiPath_Jenkins_CICDDemo\\.local"
+      "projectUniqueName": "UiPath Jenkins CICD JIRA Demo",
+      "projectName": "UiPath Jenkins CICD JIRA Demo",
+      "projectPath": "C:\\Users\\Administrator\\Documents\\UiPath\\uipath-jenkins-xray-cicd\\.local",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Documents\\UiPath\\uipath-jenkins-xray-cicd\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5547,7 +5547,7 @@
             "version": "[20.10.6, 20.10.6]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\gurpal.thumber\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
