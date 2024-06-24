@@ -53,7 +53,7 @@ jobs:
           .\ci-scripts\import_results_to_xray.ps1 `
           -clientID "${{ vars.XRAY_CLIENT_ID }}" `
           -clientSecret "$env:XRAY_CLIENT_SECRET" `
-          -projectKey "TTP" `
+          -projectKey "TTW" `
           -testPlanKey "${{ github.event.inputs.testPlanId }}" `
           -resultsFile ".\output\testResults.xml" `
           -frameworkEndpoint "junit"
